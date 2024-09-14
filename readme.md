@@ -96,6 +96,10 @@ Make sure you have the following installed:
 
 Taher Ali
 
+### Limitations
+
+- **In-Memory Storage:** QuizWiz currently stores data in memory. This means that any data (quizzes, results, etc.) will be lost when the server is restarted or shut down. For persistent storage, consider integrating a database.
+
 ### Acknowledgements
 
 - This project uses several open-source libraries and tools that have been instrumental in its development.
