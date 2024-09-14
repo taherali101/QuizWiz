@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "target": "ES2022",
+    "module": "CommonJS",
+    "allowJs": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "alwaysStrict": true,
+    "strict": true,
+    "rootDir": "./src",
+    "baseUrl": "src",
+    "outDir": "./dist/",
+    "plugins": [{ "transform": "typescript-transform-paths" }],
+    "paths": {
+      "@@constants/*": ["constants/*"],
+      "@@constants": ["constants"],
+      "@@controllers/*": ["controllers/*"],
+      "@@controllers": ["controllers"],
+      "@@errors": ["errors"],
+      "@@errors/*": ["errors/*"],
+      "@@middlewares/*": ["middlewares/*"],
+      "@@middlewares": ["middlewares"],
+      "@@models/*": ["models/*"],
+      "@@models": ["models"],
+      "@@services/*": ["services/*"],
+      "@@services": ["services"],
+      "@@routes/*": ["routes/*"],
+      "@@routes": ["routes"],
+      "@@handlers/*": ["handlers/*"],
+      "@@handlers": ["handlers"],
+      "@@types/*": ["types/*"],
+      "@@types": ["types"]
+    },
+    "skipLibCheck": true // Add this line
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/**/*", "dist/**/*"]
+}

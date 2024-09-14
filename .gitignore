@@ -1,0 +1,13 @@
+# package directories
+node_modules
+
+# Environments
+.env
+
+# Yarn error logs
+yarn-error.log
+yarn.lock
+
+# Build folders
+dist
+test_build
