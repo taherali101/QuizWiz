@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "fa69bba7-8894-4c23-999f-b39b4e49a8c7",
+		"name": "QuizWiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26367172"
+	},
+	"item": [
+		{
+			"name": "CreateQuiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ0ZXN0ZGV2QHRlc3QuY29tIiwiaWF0IjoxNjg2ODk0NTg5LCJleHAiOjE2ODcwNjczODksInN1YiI6IjYifQ.lh--KPOou-Bu8ezPVVR73p5Bw2SP6od5BWan83s01Rav-22CMYaPQu0uwM0Rs5FVbVkGaYNkiatxhim1lMisL4Q36OA4CLdUweDVWfaH70r3AV2HeNNVazVSo3OESsMu0L-q8QdibLrgAZCr5RaHjJvbfiIotq8TQvhzWyvsQMSMAioke4yZ76LyVmz7DvZ1etTqcgun8-jFCnwQKUakjzbQ6usxkZa7t8kY09JRYaFGe4XqKVqfea4TCWOJNxbJIqKq0A-mU1iOxEEvynbK-r3h9Y_PCoF2NQgSgHsuWHP02Qkvp4lSPlI-IuqDqcI5hRrBbYfe51-7Z84AWKvqRw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"General Knowledge Quiz\",\n  \"questions\": [\n    {\n      \"text\": \"What is the capital of France?\",\n      \"options\": [\n        \"Berlin\",\n        \"Madrid\",\n        \"Paris\",\n        \"Rome\"\n      ],\n      \"correctOption\": 2\n    },\n    {\n      \"text\": \"Which planet is known as the Red Planet?\",\n      \"options\": [\n        \"Earth\",\n        \"Mars\",\n        \"Jupiter\",\n        \"Saturn\"\n      ],\n      \"correctOption\": 1\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/quiz"
+			},
+			"response": []
+		},
+		{
+			"name": "GetQuiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/quiz/ad994471-16b3-49a1-8a27-bf757b04b0b6"
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitResponse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quizId\": \"e9f516ce-55b0-44de-9551-770becc0ffd2\",\n    \"questionId\": \"20cdf1eb-c4ef-4661-bfb2-d885f477b46b\",\n    \"selectedOption\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/quiz/answer/ad994471-16b3-49a1-8a27-bf757b05b8h12"
+			},
+			"response": []
+		},
+		{
+			"name": "getResults",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/quiz/e9f516ce-55b0-44de-9551-770becc0ffd2/results/ad994471-16b3-49a1-8a27-bf757b05b8h12"
+			},
+			"response": []
+		}
+	]
+}
